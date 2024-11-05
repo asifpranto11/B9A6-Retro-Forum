@@ -1,0 +1,55 @@
+
+
+.font-mulish {
+  font-family: "Mulish", sans-serif;
+  
+}
+
+
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    
+    gap: 24px;
+    
+    padding: 20px;
+  }
+  
+  /* Navbar item styling */
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  
+  /* Tooltip text styling */
+  .nav-item .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* Position tooltip below the emoji */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Prevent tooltip from wrapping */
+  }
+  
+  /* Show the tooltip on hover */
+  .nav-item:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  

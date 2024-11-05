@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://kit.fontawesome.com/6cba576b2f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles/style.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+
+
+
+</head>
+<body class="font-serif">
+
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Homepage</a></li>
+                  <li><a>Tooltip</a></li>
+                  <li><a>Add Person</a></li>
+                  <li><a>About</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-start">
+             <img src="images/logo.png" alt="">
+            </div>
+            <li>
+                <div class="nav-item">
+                    <a href=""><i class="fa-solid fa-house"></i></a>
+                      <span class="tooltiptext">Homepage</span>
+                    </div>
+              </li>
+                <li>
+                    <div class="nav-item">
+                     <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <span class="tooltiptext">Tooltip</span>
+                      </div>
+                  
+                
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href=""><i class="fa-solid fa-user-plus"></i></a>
+                        <span class="tooltiptext">Add Person</span>
+                      </div>
+                  
+                
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href=""><i class="fa-regular fa-flag"></i></a>
+                        <span class="tooltiptext">About</span>
+                      </div>
+                  
+                
+                </li>
+                <div class="">
+                    <a class="btn btn-primary">Sign In</a>
+                  </div>
+             
+              </ul>
+            </div>
+            
+          </div>
+        
+          <section class="lg:p-24 p-3">
+            <div class="hero bg-slate-900 min-h-screen ">
+                <div class="hero-content flex-col lg:flex-row gap-24">
+                  <div class="text-center lg:text-left">
+                    <h1 class="text-5xl font-bold text-white">Welcome to the <br>  <span class="text-6xl font-extrabold bg-gradient-to-bl from-blue-400 to-blue-900 bg-clip-text text-transparent leading-normal">Retro</span> Forum</h1>
+                    <p class="py-6 text-white">
+                        Share your favorite opinion and win and wp forum coffee mug!
+                    </p>
+                    <label class="input input-bordered flex items-center gap-2 h-14">
+                        <input id="search-field" type="text" class="grow " placeholder="Search" />
+                       <button onclick="handleBySearch()" class="btn btn-primary w-24  py-4 px-2">Search</button>
+                      </label>
+                  </div>
+                  <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      
+                     <p>Registered Users-----
+                        01</p>
+                     <p>Forum----------------
+                        05</p>
+                     <p>Topics----------------
+                        01</p>
+                     <p>Replies---------------
+                        01</p>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </section>
+       <div id="loading-spinner" class="text-center mb-10 hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+       </div>
+    </header>
+
+
+    
+    <main>
+       <section>
+        <h1 class="text-4xl font-bold text-center">Let’s Discuss</h1>
+        <p class="text-center mt-4">Yes, you can run unit tests and view the results directly within the app. <br>The integrated testing features allow for a streamlined .</p>
+
+     <div class="flex lg:flex-row flex-col justify-center lg:ml-36 mt-16">
+     
+        <div id="allpost-container" class="mt-16 flex space-y-10 lg:flex-col justify-center flex-col">
+           <!---<div class=" bg-base-100 lg:w-full shadow-xl flex justify-center p-2 lg:p-10">
+                <div><img src="images/people.png" alt=""></div>
+                <div class="space-y-5">
+                    <div class="flex">
+                        <p># Music</p>
+                        <p>Author : Awlad Hossain</p>
+                    </div>
+                 <div>
+                    <h2 class="card-title">10 Kids Unaware of Their Halloween Costume</h2>
+                    <p>It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative</p>
+                 </div>
+                 <div class="flex gap-20">
+                    <div class="flex gap-3 items-center">
+                        <p><i class="fa-regular fa-message"></i></p>
+                            <p>560</p>
+                      </div>
+                    <div class="flex gap-3 items-center">
+                        <p><i class="fa-regular fa-eye"></i></p>
+                            <p>1569</p>
+                      </div>
+                    <div class="flex gap-3 items-center">
+                        <p><i class="fa-regular fa-clock"></i></p>
+                            <p>5 min</p>
+                      </div>
+                     <button class="btn all-btn"> <i class="fa-solid fa-message "></i></button>
+                 </div>
+                
+                </div>
+                
+              </div>-->
+
+     </div>
+       
+
+           <div id="allPost-review">
+            <div class="space-y-4 space-x-10 ">
+                <div class="flex gap-32 ml-10"><h2>Tittle</h2>
+                    <h3>Mark as read <span id="cart-count" class="bg-emerald-400 text-white" >(0)</span></h3></div>
+                <div class=" bg-base-100 w-96 shadow-xl p-10">
+                    <ul id="selected-container">
+                     <div id="cart-review" class="flex gap-10">
+                        <h2 class=""> <br></h2>
+                        <div class="flex gap-3 items-center">
+                          <p><i class="fa-regular fa-eye"></i></p>
+                              <p></p>
+                        </div>
+                       
+                      </div>
+                    </ul>
+                  </div>
+            </div>
+           </div>
+        </div>
+       </section>
+
+       <section class="lg:p-24 p-3">
+        <div class="hero bg-slate-900 rounded-3xl">
+            <div class="hero-content flex-col lg:flex-row gap-24">
+              <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold text-white">Join Our Forum</h1>
+                <p class="py-6 text-white">
+                    Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. 
+                </p>
+               
+              </div>
+              <div class=" max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+               <img src="images/joinforum.png" alt="">
+                 
+                </form>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section>
+        <h1 class="text-4xl font-bold text-center">Latest Posts</h1>
+        <p class="text-center mt-4">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <div id="latestpost-container" class="lg:m-24 flex flex-col gap-4 mt-20 p-4 md:flex-row md:p-5">
+           <!---- <div id="latest-posts" class="card bg-base-100 w-96 lg:w-96 md:w-80 shadow-xl">
+                <figure>
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="space-y-6 p-5">
+                    <div class="flex gap-4">
+                        <p><i class="fa-regular fa-calendar"></i></p>
+                        <p>29 January 2024</p>
+                    </div>
+                  <h2 class="font-semibold text-lg">What will a mars habitat force that <br> impact in our daily life!!!</h2>
+                  <p>Yes, you can run unit tests and view the <br> results directly within the app. </p>
+                 <div class="flex gap-2">
+                    <img src="images/people.png" alt="">
+                    <div>
+                        <h4>Cameron Williamson</h4>
+                        <p>Unknown</p>
+                    </div>
+                 </div>
+                </div>
+              </div>-->
+         
+        </div>
+      </section>
+    </main>
+    <footer>
+        <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+           <img src="images/logo.png" alt="">
+            <nav>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
+              <div class="grid grid-flow-col gap-4 pt-8">
+                <a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                  </svg>
+                </a>
+                <a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                  </svg>
+                </a>
+                <a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                  </svg>
+                </a>
+              </div>
+            </nav>
+            <aside>
+                
+              <p>2017, All Rights Reserved.</p>
+            </aside>
+          </footer>
+    </footer>
+   
+    
+
+    <script src="js/main.js"></script>
+    <script src="js/function.js"></script>
+
+   
+</body>
+</html>
